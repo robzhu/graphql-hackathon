@@ -1,7 +1,7 @@
 {
-  "name": "REST-API",
+  "name": "GraphQL server",
   "version": "0.0.1",
-  "description": "Demo REST API",
+  "description": "GraphQL server running on express with simple schema and in-memory database",
   "babel": {
     "presets": [
       "es2015"
