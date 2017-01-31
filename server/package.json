@@ -1,5 +1,5 @@
 {
-  "name": "GraphQL server",
+  "name": "graphql-server",
   "version": "0.0.1",
   "description": "GraphQL server running on express with simple schema and in-memory database",
   "babel": {
