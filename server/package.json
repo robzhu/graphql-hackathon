@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "babel src -d build",
+    "postinstall": "npm run build",
     "start": "node build/index.js",
     "dev": "babel-watch src/index.js"
   },
