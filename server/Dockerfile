@@ -1,5 +1,7 @@
 FROM node:7-slim
 
+# To build first run `npm run build`
+
 ENV NODE_ENV production
 EXPOSE 80
 
