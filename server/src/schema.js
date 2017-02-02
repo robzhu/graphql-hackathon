@@ -21,7 +21,8 @@ const schema = new GraphQLSchema({
       books: {
         type: new GraphQLList(bookType),
         resolve: _ => {
-          return books;
+          // Resolve functions can return promises
+          return Promise.resolve(books);
         }
       },
       bookSearch: {
