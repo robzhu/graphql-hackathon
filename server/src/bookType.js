@@ -12,7 +12,10 @@ export const bookType = new GraphQLObjectType({
   name: 'Book',
   description: 'Words on a page, tells a story.',
   fields:() => ({
-    id: {type: GraphQLString},
+    id: {
+      type: GraphQLString,
+      resolve: (book) => `book-${book.id}`,
+    },
     title: {type: GraphQLString},
     image: {type: GraphQLString},
     authorId: {type: GraphQLString},
