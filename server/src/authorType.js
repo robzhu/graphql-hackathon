@@ -11,7 +11,10 @@ const authorType = new GraphQLObjectType({
   name: 'Author',
   description: 'The creator of books',
   fields:() => ({
-    id: {type: GraphQLString},
+    id: {
+      type: GraphQLString,
+      resolve: (author) => `author-${author.id}`,
+    },
     name: {type: GraphQLString},
     image: {type: GraphQLString},
     books: {

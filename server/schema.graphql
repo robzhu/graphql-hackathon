@@ -1,0 +1,49 @@
+schema {
+  query: QueryRoot
+  mutation: MutationRoot
+}
+
+type Author {
+  id: String
+  name: String
+  image: String
+  books: [Book]
+}
+
+type Book {
+  id: String
+  title: String
+  image: String
+  authorId: String
+  description: String
+  author: Author
+}
+
+input BookInput {
+  id: String
+  title: String
+  image: String
+  description: String
+  authorId: String
+}
+
+type MutationRoot {
+  addBook(book: BookInput): Book
+}
+
+type QueryRoot {
+  viewer: Viewer
+  authors: [Author]
+  books: [Book]
+  bookByID(id: String): Book
+  bookSearch(keyword: String): [Book]
+  secret: String
+}
+
+type Viewer {
+  authors: [Author]
+  books: [Book]
+  bookByID(id: String): Book
+  bookSearch(keyword: String): [Book]
+  secret: String
+}
