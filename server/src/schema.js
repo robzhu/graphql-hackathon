@@ -22,6 +22,17 @@ const rootFields = {
       return Promise.resolve(books);
     }
   },
+  bookByID: {
+    type: bookType,
+    args: {
+      id: {
+        type: GraphQLString,
+      }
+    },
+    resolve: (object, {id}, context, info) => {
+      return books.find(book => book.id == id);
+    }
+  },
   bookSearch: {
     type: new GraphQLList(bookType),
     args: {
