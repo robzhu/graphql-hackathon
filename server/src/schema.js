@@ -30,7 +30,7 @@ const rootFields = {
       }
     },
     resolve: (object, {id}, context, info) => {
-      return books.find(book => book.id == id);
+      return books.find(book => `book-${book.id}` == id);
     }
   },
   bookSearch: {
