@@ -1,5 +1,7 @@
 # Apollo React Hackathon Starter Kit
 
+This demonstrates simple parameterized queries, routing, and a mutation. Get the full details about using Apollo with React in [the official Apollo docs](http://dev.apollodata.com/react/).
+
 ## Installation
 
 Clone the repository and run `npm install`:
