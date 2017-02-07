@@ -2,23 +2,18 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 
-import PostUpvoter from './PostUpvoter';
-
-// The data prop, which is provided by the wrapper below contains,
+// The data prop, which is provided by the wrapper below, contains
 // a `loading` key while the query is in flight and posts when it is ready
-function PostList({ data: { loading, posts } }) {
+function BookList({ data: { loading, books } }) {
   if (loading) {
     return <div>Loading</div>;
   } else {
     return (
       <ul>
-        {posts.sort((x, y) => y.votes - x.votes).map(post =>
+        {books.map(post =>
           <li key={post.id}>
             {post.title} by {' '}
-            {post.author.firstName} {post.author.lastName} {' '}
-            <span>({post.votes} votes)</span>
-
-            <PostUpvoter postId={post.id} />
+            {post.author.name} {' '}
           </li>
         )}
       </ul>
@@ -27,18 +22,17 @@ function PostList({ data: { loading, posts } }) {
 }
 
 // The `graphql` wrapper executes a GraphQL query and makes the results
-// available on the `data` prop of the wrapped component (PostList here)
+// available on the `data` prop of the wrapped component (BookList here)
 export default graphql(gql`
-  query allPosts {
-    posts {
+  query AllBooksQuery {
+    books {
       id
+      image
       title
-      votes
       author {
         id
-        firstName
-        lastName
+        name
       }
     }
   }
-`)(PostList);
+`)(BookList);

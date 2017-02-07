@@ -12,13 +12,10 @@
     "react-scripts": "0.2.1"
   },
   "dependencies": {
-    "apollo-client": "^0.4.21",
-    "graphql": "^0.6.2",
-    "graphql-tag": "0.1.11",
-    "graphql-tools": "^0.6.4",
-    "lodash": "^4.15.0",
+    "apollo-client": "^0.8.2",
+    "graphql-tag": "^1.2.4",
     "react": "^15.2.1",
-    "react-apollo": "^0.5.12",
+    "react-apollo": "^0.10.0",
     "react-dom": "^15.2.1"
   },
   "scripts": {
