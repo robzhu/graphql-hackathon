@@ -1,6 +1,4 @@
-# Apollo React Hello World app
-
-This is the simple example React/Apollo app that lives at dev.apollodata.com.
+# Apollo React Hackathon Starter Kit
 
 ## Installation
 
@@ -12,10 +10,9 @@ cd frontpage-react-app
 npm install
 ```
 
-
 ## Starting the app
 
-This app talks to the hello world server, available here: https://github.com/apollostack/frontpage-server
+This app talks to the GraphQL server found in the same repository.
 
 Once you've installed and started that server, start this app with:
 
