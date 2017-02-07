@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import './App.css';
 
 import BookSearch from './BookSearch';
+import BookDetails from './BookDetails';
+
+const Layout = ({ children }) => (
+  <div>{ children }</div>
+);
 
 class App extends Component {
   constructor(...args) {
     super(...args);
 
-    const networkInterface = createNetworkInterface('http://localhost:5000/graphql');
+    const networkInterface = createNetworkInterface({
+      uri: 'http://localhost:5000/graphql',
+      opts: { cors: true },
+    });
 
     this.client = new ApolloClient({
       networkInterface,
@@ -22,7 +31,12 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={this.client}>
-        <BookSearch />
+        <Router history={browserHistory}>
+          <Route path="/" component={Layout}>
+            <IndexRoute component={BookSearch} />
+            <Route path="/details/:bookId" component={BookDetails} />
+          </Route>
+        </Router>
       </ApolloProvider>
     );
   }
