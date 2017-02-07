@@ -14,6 +14,8 @@ class App extends Component {
 
     this.client = new ApolloClient({
       networkInterface,
+
+      // Our backend has unique IDs, so we should use them for cache consistency
       dataIdFromObject: r => r.id,
     });
   }
