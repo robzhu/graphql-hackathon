@@ -4,7 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 
 import './App.css';
 
-import BookSearchResults from './BookSearchResults';
+import BookSearch from './BookSearch';
 
 class App extends Component {
   constructor(...args) {
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={this.client}>
-        <BookSearchResults keyword={'Harry'} />
+        <BookSearch />
       </ApolloProvider>
     );
   }

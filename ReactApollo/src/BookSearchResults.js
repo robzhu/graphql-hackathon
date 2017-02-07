@@ -3,8 +3,9 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 
 // The data prop, which is provided by the wrapper below, contains
-// a `loading` key while the query is in flight and posts when it is ready
-function BookSearchResults({ data: { loading, bookSearch } }) {
+// a `loading` key while the query is in flight, and the bookSearch
+// results when they are ready
+const BookSearchResults = ({ data: { loading, bookSearch } }) => {
   if (loading) {
     return <div>Loading</div>;
   } else {
@@ -18,10 +19,13 @@ function BookSearchResults({ data: { loading, bookSearch } }) {
       </ul>
     );
   }
-}
+};
 
 // The `graphql` wrapper executes a GraphQL query and makes the results
-// available on the `data` prop of the wrapped component (BookSearchResults here)
+// available on the `data` prop of the wrapped component.
+//
+// Note that if you type a search field and then hit backspace, the
+// Apollo cache kicks in and no actual data loading is done.
 export default graphql(gql`
   query BookSearchQuery($keyword: String!) {
     bookSearch(keyword: $keyword) {
