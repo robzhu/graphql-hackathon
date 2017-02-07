@@ -1,6 +1,7 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
+import { Link } from 'react-router';
 
 // The data prop, which is provided by the wrapper below, contains
 // a `loading` key while the query is in flight, and the bookSearch
@@ -13,7 +14,9 @@ const BookSearchResults = ({ data: { loading, bookSearch } }) => {
       <ul>
         {bookSearch.map(book =>
           <li key={book.id}>
-            {book.title} by {book.author.name}
+            <Link to={`/details/${book.id}`}>
+              {book.title} by {book.author.name}
+            </Link>
           </li>
         )}
       </ul>

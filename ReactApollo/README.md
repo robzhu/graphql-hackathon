@@ -1,6 +1,6 @@
 # Apollo React Hackathon Starter Kit
 
-This demonstrates simple parameterized query. Get the full details about using Apollo with React in [the official Apollo docs](http://dev.apollodata.com/react/).
+This demonstrates simple parameterized queries and routing. Get the full details about using Apollo with React in [the official Apollo docs](http://dev.apollodata.com/react/).
 
 ## Installation
 
