@@ -31,6 +31,7 @@ export default graphql(gql`
     }
   }
 `, {
+  // These params come from React Router's URL pattern
   options: ({ params }) => {
     return { variables: { bookId: params.bookId } }
   },
