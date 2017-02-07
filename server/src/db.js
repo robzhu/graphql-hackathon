@@ -33,7 +33,7 @@ export const books = [
   // Harry Potter Series
   {
     id: 4,
-    title: 'Harry Potter and the Sorcerors Stone',
+    title: 'Harry Potter and the Sorcerer\'s Stone',
     image: 'http://i.imgur.com/qJ7QKXD.jpg',
     authorId: 1,
     description: `Harry Potter and the Philosopher's Stone is the first novel in the Harry Potter series and J. K. Rowling's debut novel, first published in 1997 by Bloomsbury. It was published in the United States as Harry Potter and the Sorcerer's Stone by Scholastic Corporation in 1998. The plot follows Harry Potter, a young wizard who discovers his magical heritage as he makes close friends and a few enemies in his first year at the Hogwarts School of Witchcraft and Wizardry. With the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just a year old.`,
