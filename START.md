@@ -13,7 +13,7 @@ ssh root@<Server IP>
 git clone https://github.com/robzhu/graphql-hackathon
 cd graphql-hackathon/server
 npm install
-# run npm run build after making any changes.
+# run 'npm run build' after making any changes.
 npm run build && npm start
 ```
 Open http://<Server IP>:5000 in your browser and you should see GraphiQL. Try executing some queries against the example Library schema. Here's a good one:
