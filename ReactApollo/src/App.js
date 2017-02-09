@@ -12,12 +12,15 @@ const Layout = ({ children }) => (
   <div>{ children }</div>
 );
 
+// Replace this Uri with your GraphQL server Uri
+const serverUri = 'http://localhost:5000/graphql';
+
 class App extends Component {
   constructor(...args) {
     super(...args);
 
     const networkInterface = createNetworkInterface({
-      uri: 'http://localhost:5000/graphql',
+      uri: serverUri,
       opts: { cors: true },
     });
 
