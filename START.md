@@ -34,6 +34,7 @@ Open http://<Server IP>:5000 in your browser and you should see GraphiQL. Try ex
 ```
 git clone https://github.com/robzhu/graphql-hackathon
 cd graphql-hackathon/ReactApollo
+npm install
 # open src/App.js in your editor and replace serverUri with your GraphQL server address
 npm start
 ```
