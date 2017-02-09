@@ -11,7 +11,7 @@ ssh root@<Server IP>
 
 ```
 git clone https://github.com/robzhu/graphql-hackathon
-cd graphql-hackathon
+cd graphql-hackathon/server
 npm install
 # run npm run build after making any changes.
 npm run build && npm start
