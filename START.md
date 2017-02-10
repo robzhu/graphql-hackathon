@@ -1,16 +1,23 @@
 # Your first 10 minutes
 Step-by-step instructions to get your project under way
 
-1) Your team will be assigned a virtual private server. Open a new terminal window and SSH to it:
+1) Fork the starter kit
+Click "Fork" on the top right of this web page. 
+
+![alt text](http://i.imgur.com/rgLrgUk.png "FORK")
+
+Next, add everyone on your team to the list of collaborators (Under Settings). Note your git repository URL (in the address bar). You'll need it in the next steps.
+
+2) Your team will be assigned a virtual private server. Open a new terminal window and SSH to it:
 ```
 ssh root@<Server IP>
 # enter your password when prompted
 ```
 
-2) Clone and run the GraphQL server
+3) Clone the repo and run the GraphQL server
 
 ```
-git clone https://github.com/robzhu/graphql-hackathon
+git clone {YourRepoURL}
 cd graphql-hackathon/server
 npm install
 # run 'npm run build' after making any changes.
@@ -29,7 +36,7 @@ Open http://<Server IP>:5000 in your browser and you should see GraphiQL. Try ex
 }
 ```
 
-3) On your laptop, run one of the clients.
+4) On your laptop, run one of the clients.
 
 ```
 git clone https://github.com/robzhu/graphql-hackathon
