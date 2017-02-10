@@ -1,26 +1,16 @@
-# Apollo Angular Hello World app
+# GraphQL/Apollo/Angular Starter
 
-This is the simple example Angular/Apollo app that lives at dev.apollodata.com.
+This is a starter repo that was originally recreated for a GraphQL Hackathon at Facebook. 
+It was based off the [general Hackathon repo](https://github.com/robzhu/graphql-hackathon) and
+[Uri Goldstein's Apollo starter](https://github.com/apollographql/apollo-angular).
 
-## Installation
+## Getting Started
 
-Clone the repository and run `npm install`:
-
-```
-git clone https://github.com/apollographql/frontpage-angular-app
-cd frontpage-angular-app
-npm install
-```
-
-
-## Starting the app
-
-This app talks to the hello world server, available here: https://github.com/apollographql/frontpage-server
-
-Once you've installed and started that server, start this app with:
-
-```
-npm start
-```
-
-It will open a browser window, or you can browse to http://localhost:3000.
+1. `git clone git@github.com:jeffwhelpley/graphql-hackathon.git`
+2. `cd graphql-hackathon`
+3. `npm i -g lerna nodemon concurrently typescript tslint @angular/cli`
+4. `lerna run build`
+5. open up two terminal windows:
+  * in one, cd to `packages/graphql-server` and then run `npm start`
+  * in the other, cd to `packages/angular-client` and run `ng serve`
+6. open your browser to [http://localhost:4200](http://localhost:4200)
