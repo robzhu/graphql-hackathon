@@ -1,21 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ApolloModule } from 'apollo-angular';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ApolloModuleInst } from './graphql';
 import { AppComponent } from './app.component';
-import { PostListComponent } from './post/post-list.component';
-import { provideClient } from './client';
+import { AuthorService, BookService } from './services';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PostListComponent
+    AppComponent                // the root component needs to be declared
   ],
   imports: [
     BrowserModule,
-    ApolloModule.forRoot(provideClient)
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    ApolloModuleInst
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthorService,
+    BookService
+  ],
+  bootstrap: [AppComponent]     // we bootstrap on the root component
 })
 export class AppModule {}
