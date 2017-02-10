@@ -42,3 +42,6 @@ build
 
 # OSX
 .DS_Store
+
+.idea
+dist
